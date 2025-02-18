@@ -5,7 +5,7 @@ const Gallery: React.FC = () => {
   return (
     <div id="gallery" className="flex justify-center my-6">
       <img
-        className="rounded-xl shadow-xl w-80 h-80 object-cover"
+        className="rounded-xl shadow-xl w-[300px] h-[340px] object-cover"
         src={Maharaji}
         alt="Shivaji Maharaj"
       />

@@ -9,6 +9,10 @@ import Achievements from './Pages/Achievements'
 import Gallery from './Pages/Gallery'
 import Contact from './Pages/Contact'
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 const App: React.FC = () => {
   return (
     <Router>

@@ -1,21 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from 'react';
+import logo from "../assets/Chhatrapti Shivaji Maharaj Img.webp"
 const Navbar: React.FC = () => {
     return (
-        <nav className="bg-orange-700 text-white py-3 shadow-md static w-full z-10">
-            <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
-                <h1 className="text-2xl font-bold">छत्रपती शिवाजी महाराज</h1>
-                <ul className="flex space-x-6">
-                    <li><Link to={"/"} className="hover:text-gray-300">मुख्यपृष्ठ</Link></li>
-                    <li><Link to={"/history"} className="hover:text-gray-300">इतिहास</Link></li>
-                    <li><Link to={"/achievements"} className="hover:text-gray-300">यश</Link></li>
-                    <li><Link to={"/gallery"} className="hover:text-gray-300">गॅलरी</Link></li>
-                    <li><Link to={"/Contact"} className="hover:text-gray-300">संपर्क</Link></li>
-                </ul>
+        <nav className="bg-orange-700 text-white py-4 shadow-md top-0 left-0 w-full z-10">
+            <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+                {/* Logo Section */}
+                <div className="flex items-center space-x-4">
+                    <img
+                        src={logo}
+                    alt="Maharaj Logo"
+                    className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <h1 className="text-3xl font-bold text-white">छत्रपती शिवाजी महाराज</h1>
+                </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
