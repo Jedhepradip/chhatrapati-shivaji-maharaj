@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import gsap from 'gsap';
+import anime from 'animejs';
 
 const Achievements: React.FC = () => {
+    const listRef = useRef<HTMLUListElement>(null);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Initialize AOS with a default duration
+
+        // GSAP animation for the heading
+        gsap.from('#achievements h3', {
+            duration: 1,
+            y: -50,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+
+        // Anime.js animation for the list items
+        if (listRef.current) {
+            anime({
+                targets: listRef.current.children,
+                opacity: [0, 1],
+                translateY: [50, 0],
+                delay: anime.stagger(200),
+                easing: 'easeOutExpo',
+                duration: 1000,
+            });
+        }
+    }, []);
+
     const achievements = [
         'शिवाजी महाराजांनी मुघल साम्राज्य व आदिलशाही साम्राज्यांविरुद्ध अनेक लढाया जिंकल्या, ज्यामुळे भारतीय इतिहासात त्यांना एक अजरामर स्थान प्राप्त झाले.',
         'त्यांनी समुद्रदुर्ग निर्माण करून भारताच्या समुद्रकिनाऱ्याचे संरक्षण केले आणि भारताच्या समुद्रमार्गांवर व्यापार सुरक्षित केला.',
@@ -16,45 +46,29 @@ const Achievements: React.FC = () => {
         'त्यांच्या विजयांमुळे भारतीय इतिहासात त्यांना एक अतुलनीय स्थान प्राप्त झाले आहे. त्यांनी भारतीय स्वातंत्र्य आणि अस्मिता राखण्यासाठी आपले जीवन समर्पित केले.',
     ];
 
-    // Animation variants for staggered animation
-    const listItemVariants = {
-        initial: { opacity: 0, y: 50 },
-        animate: { opacity: 1, y: 0 },
-    };
-
-    const containerVariants = {
-        initial: {},
-        animate: {
-            transition: {
-                staggerChildren: 0.2, // Delay each item by 0.2s
-            },
-        },
-    };
-
     return (
         <motion.section
             id="achievements"
             className="py-10 px-6 bg-yellow-100 shadow-md rounded-lg max-w-4xl mx-auto mt-10"
-            initial="initial"
-            animate="animate"
-            variants={containerVariants}
+            data-aos="fade-up"
         >
-            <h3 className="text-3xl font-bold text-gray-800">महान कार्य आणि विजय</h3>
-            <motion.ul
+
+            <ul
+                ref={listRef}
                 className="text-gray-600 mt-4 space-y-4 leading-relaxed"
-                variants={containerVariants}
             >
+                <h3 className="text-3xl font-bold text-gray-800">महान कार्य आणि विजय</h3>
                 {achievements.map((achievement, index) => (
-                    <motion.li
+                    <li
                         key={index}
                         className="flex items-center"
-                        variants={listItemVariants}
+                        data-aos="fade-up"
                     >
                         <span className="text-xl">&#8226;</span>
                         <p className="ml-2">{achievement}</p>
-                    </motion.li>
+                    </li>
                 ))}
-            </motion.ul>
+            </ul>
         </motion.section>
     );
 };

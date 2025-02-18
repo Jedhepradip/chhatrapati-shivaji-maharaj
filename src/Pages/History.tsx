@@ -10,22 +10,25 @@ const History: React.FC = () => {
 
     return (
         <>
-            <section
+            {/* <section
                 id="history"
-                className="py-10 px-6 bg-white shadow-md rounded-lg max-w-4xl mx-auto"
+                className="py-10 px-6 bg-yellow-100 shadow-md rounded-lg max-w-4xl mx-auto"
                 data-aos="fade-up"
             >
                 <motion.h3
                     className="text-2xl font-semibold text-gray-800"
                     initial={{ opacity: 0 }}
+                    data-aos="fade-up"
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
                     प्रारंभिक जीवन आणि यश
                 </motion.h3>
 
+
                 <motion.p
                     className="text-gray-600 mt-2"
+                    data-aos="fade-up"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
@@ -36,6 +39,7 @@ const History: React.FC = () => {
                 </motion.p>
                 <motion.p
                     className="text-gray-600 mt-4"
+                    data-aos="fade-up"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
@@ -47,6 +51,7 @@ const History: React.FC = () => {
 
                 <motion.p
                     className="text-gray-600 mt-4"
+                    data-aos="fade-up"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.7 }}
@@ -58,6 +63,7 @@ const History: React.FC = () => {
 
                 <motion.p
                     className="text-gray-600 mt-4"
+                    data-aos="fade-up"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
@@ -69,6 +75,7 @@ const History: React.FC = () => {
 
                 <motion.p
                     className="text-gray-600 mt-4"
+                    data-aos="fade-up"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.3 }}
@@ -81,6 +88,7 @@ const History: React.FC = () => {
                 <motion.p
                     className="text-gray-600 mt-4"
                     initial={{ opacity: 0 }}
+                    data-aos="fade-up"
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.5 }}
                 >
@@ -92,6 +100,7 @@ const History: React.FC = () => {
                 <motion.p
                     className="text-gray-600 mt-4"
                     initial={{ opacity: 0 }}
+                    data-aos="fade-up"
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.7 }}
                 >
@@ -104,14 +113,15 @@ const History: React.FC = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
+                    data-aos="fade-up"
                 >
                     त्यांच्या कार्यशक्तीने प्रेरित होऊन, भारतभरात स्वराज्याची तत्त्वे अधिक मजबूत झाली आणि स्वातंत्र्य
                     संग्रामाच्या प्रेरणा मिळाल्या. त्यांचा लौकिक आजही जगभरात वाजत आहे.
                 </motion.p>
-            </section>
+            </section> */}
 
 
-            <section className="py-10 px-6 bg-white shadow-md rounded-lg max-w-4xl mx-auto">
+            <section className="py-10 px-6 bg-yellow-100 mt-10 shadow-md rounded-lg max-w-4xl mx-auto">
                 <motion.h3
                     className="text-2xl font-semibold text-gray-800"
                     initial={{ opacity: 0 }}
